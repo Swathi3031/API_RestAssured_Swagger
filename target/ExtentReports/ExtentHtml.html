@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Jun 12, 2025 11:59:57 PM</span></a>
+<a href="#"><span class="badge badge-primary">Jun 13, 2025 01:07:14 PM</span></a>
 </li>
 </ul>
 </div>
@@ -71,6 +71,7 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
 <a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
@@ -84,9 +85,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Add New User API - Positive Scenarios</p>
+            <p class="name">User Deletion API by userFirstName - DELETE Request Scenarios</p>
             <p class="text-sm">
-              <span>11:59:58 PM</span> / <span>00:00:10:406</span>
+              <span>1:07:15 PM</span> / <span>00:00:09:987</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -94,10 +95,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">Add New User API - Positive Scenarios</h5>
-<span class='badge badge-success'>06.12.2025 11:59:58 PM</span>
-<span class='badge badge-danger'>06.13.2025 12:00:09 AM</span>
-<span class='badge badge-default'>00:00:10:406</span>
+<h5 class="test-status text-fail">User Deletion API by userFirstName - DELETE Request Scenarios</h5>
+<span class='badge badge-success'>06.13.2025 1:07:15 PM</span>
+<span class='badge badge-danger'>06.13.2025 1:07:25 PM</span>
+<span class='badge badge-default'>00:00:09:987</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -109,7 +110,3495 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Add a new user with all mandatory and optional fields</div>
+        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>Verify that the user deletion operation is successful with existing userFirstName</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Delete_UserFirstName.the_user_first_name_exists_already()">
+                <span>Given The userFirstName exists already</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserFirstName.send_delete_request_by_user_first_name()">
+                <span>When User sends DELETE request to delete the respective userFirstName</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="StepDefinition.Delete_UserFirstName.user_receives_200_ok_status()">
+                <span>Then User receives 200 OK status with success message</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at org.testng.Assert.assertEquals(Assert.java:1441)
+	at StepDefinition.Delete_UserFirstName.user_receives_200_ok_status(Delete_UserFirstName.java:32)
+	at ✽.User receives 200 OK status with success message(file:///C:/Users/chand/eclipse-workspace/API_RESTASSURED/src/test/resources/Features/Delete_UserFirstname.feature:6)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="8"><span class="badge log pass-bg mr-2">Pass</span>Verify that the user deletion operation again after successful deletion with same userFirstName</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Delete_UserFirstName.the_user_first_name_is_already_deleted()">
+                <span>Given The userFirstName is already deleted</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserFirstName.send_delete_request_by_user_first_name()">
+                <span>When User sends DELETE request to delete the respective userFirstName</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserFirstName.user_receives_404_not_found_error()">
+                <span>Then User receives 404 Not Found error with message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="14"><span class="badge log pass-bg mr-2">Pass</span>Verify userFirstName in response is deleted with requested userFirstName</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Delete_UserFirstName.the_user_first_name_is_already_deleted()">
+                <span>Given The userFirstName is already deleted</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserFirstName.send_delete_request_by_user_first_name()">
+                <span>When User sends DELETE request to delete the respective userFirstName</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserFirstName.validate_deleted_user_first_name_in_response()">
+                <span>Then Response body contains the same userFirstName as requested</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="20"><span class="badge log pass-bg mr-2">Pass</span>Verify that the user deletion operation with invalid userFirstName (alphanumeric and special characters)</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Delete_UserFirstName.user_enters_invalid_user_firstname_combo()">
+                <span>Given User enters userFirstName with combination of number, alphabet and special characters</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserFirstName.send_delete_request_by_user_first_name()">
+                <span>When User sends DELETE request to delete the respective userFirstName</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserFirstName.validate_404_for_invalid_userFirstName()">
+                <span>Then User receives 404 Not Found error with userFirstName message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="26"><span class="badge log pass-bg mr-2">Pass</span>Verify that the userFirstName deletion operation with only special characters</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Delete_UserFirstName.user_enters_only_special_characters()">
+                <span>Given User enters userFirstName with only special characters</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserFirstName.send_delete_request_by_user_first_name()">
+                <span>When User sends DELETE request to delete the respective userFirstName</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserFirstName.validate_404_for_invalid_userFirstName()">
+                <span>Then User receives 404 Not Found error with userFirstName message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="32"><span class="badge log pass-bg mr-2">Pass</span>Verify that the userFirstName deletion operation with only digits</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Delete_UserFirstName.user_enters_digits_only()">
+                <span>Given User enters userFirstName with only 5 digits</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserFirstName.send_delete_request_by_user_first_name()">
+                <span>When User sends DELETE request to delete the respective userFirstName</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserFirstName.validate_404_for_invalid_userFirstName()">
+                <span>Then User receives 404 Not Found error with userFirstName message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="38"><span class="badge log pass-bg mr-2">Pass</span>Verify that the userFirstName deletion operation with non-existent/invalid userFirstName</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Delete_UserFirstName.user_enters_non_existent_userFirstName()">
+                <span>Given User enters userFirstName with non-existent userFirstName</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserFirstName.send_delete_request_by_user_first_name()">
+                <span>When User sends DELETE request to delete the respective userFirstName</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserFirstName.validate_404_for_invalid_userFirstName()">
+                <span>Then User receives 404 Not Found error with userFirstName message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="44"><span class="badge log pass-bg mr-2">Pass</span>Verify that the userFirstName deletion operation with zero value</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Delete_UserFirstName.user_enters_zero_value()">
+                <span>Given User enters userFirstName with zero value</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserFirstName.send_delete_request_by_user_first_name()">
+                <span>When User sends DELETE request to delete the respective userFirstName</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserFirstName.validate_404_for_invalid_userFirstName()">
+                <span>Then User receives 404 Not Found error with userFirstName message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="50"><span class="badge log pass-bg mr-2">Pass</span>Verify that the userFirstName deletion operation with negative integer value</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Delete_UserFirstName.user_enters_negative_value()">
+                <span>Given User enters userFirstName with negative integer value</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserFirstName.send_delete_request_by_user_first_name()">
+                <span>When User sends DELETE request to delete the respective userFirstName</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserFirstName.validate_404_for_invalid_userFirstName()">
+                <span>Then User receives 404 Not Found error with userFirstName message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="56"><span class="badge log pass-bg mr-2">Pass</span>Verify that the userFirstName deletion operation with out of range value</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Delete_UserFirstName.user_enters_out_of_range_value()">
+                <span>Given User enters userFirstName with out of range value</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserFirstName.send_delete_request_by_user_first_name()">
+                <span>When User sends DELETE request to delete the respective userFirstName</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserFirstName.validate_404_for_invalid_userFirstName()">
+                <span>Then User receives 404 Not Found error with userFirstName message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="62"><span class="badge log pass-bg mr-2">Pass</span>Verify the userFirstName deletion operation with invalid BaseURL</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Delete_UserFirstName.user_enters_invalid_baseurl()">
+                <span>Given User enters userFirstName with invalid BaseURL and valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserFirstName.send_delete_request_by_user_first_name()">
+                <span>When User sends DELETE request to delete the respective userFirstName</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserFirstName.validate_404_for_invalid_userFirstName()">
+                <span>Then User receives 404 Not Found error with userFirstName message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="68"><span class="badge log pass-bg mr-2">Pass</span>Verify the userFirstName deletion operation with invalid Endpoint</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Delete_UserFirstName.user_enters_invalid_endpoint()">
+                <span>Given User enters userFirstName with valid BaseURL and invalid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserFirstName.send_delete_request_by_user_first_name()">
+                <span>When User sends DELETE request to delete the respective userFirstName</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserFirstName.validate_404_for_invalid_userFirstName()">
+                <span>Then User receives 404 Not Found error with userFirstName message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="74"><span class="badge log pass-bg mr-2">Pass</span>Verify the userFirstName deletion operation with empty Endpoint</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Delete_UserFirstName.user_enters_empty_endpoint()">
+                <span>Given User enters userFirstName with valid BaseURL and empty Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserFirstName.send_delete_request_by_user_first_name()">
+                <span>When User sends DELETE request to delete the respective userFirstName</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserFirstName.validate_404_for_invalid_userFirstName()">
+                <span>Then User receives 404 Not Found error with userFirstName message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="80"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">User Deletion API - DELETE Request Scenarios</p>
+            <p class="text-sm">
+              <span>1:07:25 PM</span> / <span>00:00:05:254</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">User Deletion API - DELETE Request Scenarios</h5>
+<span class='badge badge-success'>06.13.2025 1:07:25 PM</span>
+<span class='badge badge-danger'>06.13.2025 1:07:30 PM</span>
+<span class='badge badge-default'>00:00:05:254</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=80</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="81"><span class="badge log fail-bg mr-2">Fail</span>Verify that the user deletion operation is successful with existing userID</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Delete_UserId.the_user_id_exists_already()">
+                <span>Given The userID exists already</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserId.user_sends_delete_request_with_existing_user_id()">
+                <span>When User sends DELETE request to delete the respective userID</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="StepDefinition.Delete_UserId.user_receives_200_ok_status()">
+                <span>Then User receives 200 OK status with the success message</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at org.testng.Assert.assertEquals(Assert.java:1441)
+	at StepDefinition.Delete_UserId.user_receives_200_ok_status(Delete_UserId.java:38)
+	at ✽.User receives 200 OK status with the success message(file:///C:/Users/chand/eclipse-workspace/API_RESTASSURED/src/test/resources/Features/Delete_Userid.feature:6)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="87"><span class="badge log pass-bg mr-2">Pass</span>Verify that the user deletion operation again after successful deletion with same userID</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Delete_UserId.user_id_is_already_deleted()">
+                <span>Given The userID is already deleted</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserId.user_sends_delete_request_with_existing_user_id()">
+                <span>When User sends DELETE request to delete the respective userID</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserId.user_receives_404_not_found()">
+                <span>Then User receives 404 Not Found error with the message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="93"><span class="badge log pass-bg mr-2">Pass</span>Verify userID in response is deleted with requested userID</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Delete_UserId.user_id_is_already_deleted()">
+                <span>Given The userID is already deleted</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserId.user_sends_delete_request_with_existing_user_id()">
+                <span>When User sends DELETE request to delete the respective userID</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserId.response_body_contains_requested_user_id()">
+                <span>Then Response body contains the same user_id as requested</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="99"><span class="badge log pass-bg mr-2">Pass</span>Verify that the user deletion operation with invalid userID (alphanumeric and special characters)</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Delete_UserId.user_enters_userid_with_alphanumeric_special_chars()">
+                <span>Given User enters userID with combination of number, alphabet and special characters</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserId.user_sends_delete_request_with_existing_user_id()">
+                <span>When User sends DELETE request to delete the respective userID</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserId.user_receives_404_not_found()">
+                <span>Then User receives 404 Not Found error with the message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="105"><span class="badge log pass-bg mr-2">Pass</span>Verify that the user deletion operation with invalid userID (only special characters)</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Delete_UserId.user_enters_userid_with_special_chars_only()">
+                <span>Given User enters userID with only special characters</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserId.user_sends_delete_request_with_existing_user_id()">
+                <span>When User sends DELETE request to delete the respective userID</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserId.user_receives_404_not_found()">
+                <span>Then User receives 404 Not Found error with the message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="111"><span class="badge log pass-bg mr-2">Pass</span>Verify that the user deletion operation with non-existent userID</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Delete_UserId.user_enters_userid_with_invalid_digits()">
+                <span>Given User enters userID with 5 invalid digits</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserId.user_sends_delete_request_with_existing_user_id()">
+                <span>When User sends DELETE request to delete the respective userID</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserId.user_receives_404_not_found()">
+                <span>Then User receives 404 Not Found error with the message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="117"><span class="badge log pass-bg mr-2">Pass</span>Verify that the user deletion operation with blank userID</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Delete_UserId.user_enters_userid_with_blank()">
+                <span>Given User enters userID with nothing (blank)</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserId.user_sends_delete_request_with_existing_user_id()">
+                <span>When User sends DELETE request to delete the respective userID</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserId.user_receives_404_not_found()">
+                <span>Then User receives 404 Not Found error with the message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="123"><span class="badge log pass-bg mr-2">Pass</span>Verify that the user deletion operation with zero value userID</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Delete_UserId.user_enters_userid_with_zero()">
+                <span>Given User enters userID with zero value</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserId.user_sends_delete_request_with_existing_user_id()">
+                <span>When User sends DELETE request to delete the respective userID</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserId.user_receives_404_not_found()">
+                <span>Then User receives 404 Not Found error with the message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="129"><span class="badge log pass-bg mr-2">Pass</span>Verify that the user deletion operation with negative integer userID</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Delete_UserId.user_enters_userid_with_negative_value()">
+                <span>Given User enters userID with negative value</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserId.user_sends_delete_request_with_existing_user_id()">
+                <span>When User sends DELETE request to delete the respective userID</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserId.user_receives_404_not_found()">
+                <span>Then User receives 404 Not Found error with the message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="135"><span class="badge log pass-bg mr-2">Pass</span>Verify that the user deletion operation with out of range userID</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Delete_UserId.user_enters_userid_with_out_of_range()">
+                <span>Given User enters userID with out of range value</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserId.user_sends_delete_request_with_existing_user_id()">
+                <span>When User sends DELETE request to delete the respective userID</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserId.user_receives_400_bad_request_with_the_message()">
+                <span>Then User receives 400 Bad Request with the message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="141"><span class="badge log pass-bg mr-2">Pass</span>Verify the user deletion operation with invalid BaseURL</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Delete_UserId.user_enters_invalid_baseurl()">
+                <span>Given User enters userID with invalid BaseURL and valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserId.user_sends_delete_with_invalid_baseurl_or_endpoint()">
+                <span>When User sends DELETE request with the respective userID</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserId.user_receives_404_not_found()">
+                <span>Then User receives 404 Not Found error with the message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="147"><span class="badge log pass-bg mr-2">Pass</span>Verify the user deletion operation with invalid Endpoint</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Delete_UserId.user_enters_valid_baseurl_invalid_endpoint()">
+                <span>Given User enters userID with valid BaseURL and invalid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserId.user_sends_delete_with_invalid_baseurl_or_endpoint()">
+                <span>When User sends DELETE request with the respective userID</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserId.user_receives_404_not_found()">
+                <span>Then User receives 404 Not Found error with the message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="153"><span class="badge log pass-bg mr-2">Pass</span>Verify the user deletion operation with empty Endpoint</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Delete_UserId.user_enters_valid_baseurl_empty_endpoint()">
+                <span>Given User enters userID with valid BaseURL and empty Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserId.user_sends_delete_with_invalid_baseurl_or_endpoint()">
+                <span>When User sends DELETE request with the respective userID</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Delete_UserId.user_receives_404_not_found()">
+                <span>Then User receives 404 Not Found error with the message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="159"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Get User by FirstName API - GET Request Scenarios</p>
+            <p class="text-sm">
+              <span>1:07:30 PM</span> / <span>00:00:04:409</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Get User by FirstName API - GET Request Scenarios</h5>
+<span class='badge badge-success'>06.13.2025 1:07:30 PM</span>
+<span class='badge badge-danger'>06.13.2025 1:07:34 PM</span>
+<span class='badge badge-default'>00:00:04:409</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=159</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="160"><span class="badge log pass-bg mr-2">Pass</span>Get User by valid FirstName</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Get_UserName.prepare_get_request_with_valid_firstname()">
+                <span>Given User prepares GET request with BaseURL, valid endpoint, and existing user FirstName</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_UserName.send_get_request_with_valid_firstname()">
+                <span>When User sends GET request with existing user FirstName</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_UserName.validate_200_status_with_user_details()">
+                <span>Then User receives 200 OK status with user details in response</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="166"><span class="badge log pass-bg mr-2">Pass</span>Validate FirstName in Response Matches Requested FirstName</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Get_UserName.prepare_get_request_with_valid_firstname()">
+                <span>Given User prepares GET request with BaseURL, valid endpoint, and existing user FirstName</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_UserName.send_get_request_with_valid_firstname()">
+                <span>When User sends GET request with existing user FirstName</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_UserName.response_body_contains_requested_firstname()">
+                <span>Then Response body contains same UserfirstName as requested</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="172"><span class="badge log pass-bg mr-2">Pass</span>Validate Response Body Content-Type is JSON</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Get_UserName.prepare_get_request_with_valid_firstname()">
+                <span>Given User prepares GET request with BaseURL, valid endpoint, and existing user FirstName</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_UserName.send_get_request_with_valid_firstname()">
+                <span>When User sends GET request with existing user FirstName</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_UserName.response_content_type_is_json()">
+                <span>Then Response Content-Type is JSON with status code 200 OK</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="178"><span class="badge log pass-bg mr-2">Pass</span>Validate Required Fields in Response</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Get_UserName.prepare_get_request_with_valid_firstname()">
+                <span>Given User prepares GET request with BaseURL, valid endpoint, and existing user FirstName</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_UserName.send_get_request_with_valid_firstname()">
+                <span>When User sends GET request with existing user FirstName</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_UserName.response_contains_required_fields()">
+                <span>Then Response contains user details: user_id, UserfirstName, UserlastName, userContactNumber, userEmailId, creationTime, lastModTime, userAddress, addressId, plotNumber, street, state, country, zipCode</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="184"><span class="badge log pass-bg mr-2">Pass</span>Validate FirstName is String Type</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Get_UserName.prepare_get_request_with_valid_firstname()">
+                <span>Given User prepares GET request with BaseURL, valid endpoint, and existing user FirstName</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_UserName.send_get_request_with_valid_firstname()">
+                <span>When User sends GET request with existing user FirstName</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_UserName.userfirstname_is_string_type()">
+                <span>Then UserfirstName in response is of string type</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="190"><span class="badge log pass-bg mr-2">Pass</span>Validate address_id is integer type in response</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Get_UserName.prepare_get_request_with_valid_firstname()">
+                <span>Given User prepares GET request with BaseURL, valid endpoint, and existing user FirstName</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_UserName.send_get_request_with_valid_firstname()">
+                <span>When User sends GET request with existing user FirstName</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_UserName.address_id_is_integer_type()">
+                <span>Then address_id is of integer type</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="196"><span class="badge log pass-bg mr-2">Pass</span>Get User with Non-Existing FirstName</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Get_UserName.prepare_get_request_with_non_existing_firstname()">
+                <span>Given User prepares GET request with BaseURL, valid endpoint, and non-existing FirstName</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_UserName.send_get_with_non_existent_firstname()">
+                <span>When User sends GET request with non-existent FirstName</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_UserName.validate_404_response()">
+                <span>Then User receives 404 Not Found status with the error message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="202"><span class="badge log pass-bg mr-2">Pass</span>Get User with Invalid FirstName Format (e.g. integer instead of string)</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Get_UserName.prepare_get_request_with_integer_firstname()">
+                <span>Given User prepares GET request with BaseURL, valid endpoint, and invalid FirstName as 123</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_UserName.send_get_with_integer_firstname()">
+                <span>When User sends GET request with invalid FirstName 123</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_UserName.validate_404_response()">
+                <span>Then User receives 404 Not Found status with the error message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="208"><span class="badge log pass-bg mr-2">Pass</span>Get User with Invalid Endpoint</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Get_UserName.prepare_get_with_invalid_endpoint()">
+                <span>Given User prepares GET request with BaseURL and invalid endpoint path</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_UserName.send_get_to_invalid_path()">
+                <span>When User sends GET request to wrong path</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_UserName.validate_404_response()">
+                <span>Then User receives 404 Not Found status with the error message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="214"><span class="badge log pass-bg mr-2">Pass</span>Get User without Authorization</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Get_UserName.prepare_get_request_without_auth()">
+                <span>Given User prepares GET request with BaseURL, valid endpoint, and existing user FirstName but without Authorization header</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_UserName.send_get_without_auth()">
+                <span>When User sends GET request with existing user FirstName without Auth</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_UserName.validate_401_response()">
+                <span>Then User received 401 Unauthorized status</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="220"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Get User by ID API - GET Request Scenarios</p>
+            <p class="text-sm">
+              <span>1:07:34 PM</span> / <span>00:00:04:358</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Get User by ID API - GET Request Scenarios</h5>
+<span class='badge badge-success'>06.13.2025 1:07:34 PM</span>
+<span class='badge badge-danger'>06.13.2025 1:07:39 PM</span>
+<span class='badge badge-default'>00:00:04:358</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=220</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="221"><span class="badge log pass-bg mr-2">Pass</span>Get User by Valid ID</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Get_USerID.prepare_get_request_with_valid_id()">
+                <span>Given User prepares GET request with BaseURL, valid endpoint, and valid user ID</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_USerID.send_get_request_with_valid_id()">
+                <span>When User sends GET request with existing user ID</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_USerID.validate_status_200()">
+                <span>Then User receives 200 OK status with the user details in response</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="227"><span class="badge log pass-bg mr-2">Pass</span>Validate user_id in Response Matches Requested ID</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Get_USerID.prepare_get_request_with_valid_id()">
+                <span>Given User prepares GET request with BaseURL, valid endpoint, and valid user ID</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_USerID.send_get_request_with_valid_id()">
+                <span>When User sends GET request with existing user ID</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_USerID.validate_response_user_id_matches()">
+                <span>Then Response body contains same user_id as requested</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="233"><span class="badge log pass-bg mr-2">Pass</span>Validate Response Body Content-Type is JSON</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Get_USerID.prepare_get_request_with_valid_id()">
+                <span>Given User prepares GET request with BaseURL, valid endpoint, and valid user ID</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_USerID.send_get_request_with_valid_id()">
+                <span>When User sends GET request with existing user ID</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_USerID.validate_content_type_json()">
+                <span>Then the Response Content-Type is JSON with status code 200 OK</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="239"><span class="badge log pass-bg mr-2">Pass</span>Validate Required Fields in Response</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Get_USerID.prepare_get_request_with_valid_id()">
+                <span>Given User prepares GET request with BaseURL, valid endpoint, and valid user ID</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_USerID.send_get_request_with_valid_id()">
+                <span>When User sends GET request with existing user ID</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_USerID.validate_mandatory_fields()">
+                <span>Then Response contains mandatory fields: user_id, UserfirstName, UserlastName, userContactNumber, userEmailId, creationTime, lastModTime, userAddress, addressId, plotNumber, street, state, country, zipCode</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="245"><span class="badge log pass-bg mr-2">Pass</span>Validate user_id is Integer Type</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Get_USerID.prepare_get_request_with_valid_id()">
+                <span>Given User prepares GET request with BaseURL, valid endpoint, and valid user ID</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_USerID.send_get_request_with_valid_id()">
+                <span>When User sends GET request with existing user ID</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_USerID.user_id_is_integer_type()">
+                <span>Then the user_id in response is of integer type</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="251"><span class="badge log pass-bg mr-2">Pass</span>Validate address_id is integer type in response</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Get_USerID.prepare_get_request_with_valid_id()">
+                <span>Given User prepares GET request with BaseURL, valid endpoint, and valid user ID</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_USerID.send_get_request_with_valid_id()">
+                <span>When User sends GET request with existing user ID</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_USerID.address_id_is_integer_type()">
+                <span>Then the address_id is of integer type</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="257"><span class="badge log pass-bg mr-2">Pass</span>Get User with Non-Existing ID</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Get_USerID.prepare_get_request_with_non_existing_id()">
+                <span>Given User prepares GET request with BaseURL, valid endpoint, and non-existing user ID</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_USerID.send_get_with_non_existent_id()">
+                <span>When User sends GET request with non-existent ID</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_USerID.validate_404_status()">
+                <span>Then User receives 404 Not Found status with an error message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="263"><span class="badge log pass-bg mr-2">Pass</span>Get User with Invalid ID Format (e.g. string instead of integer)</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Get_USerID.prepare_get_request_with_invalid_id_string()">
+                <span>Given User prepares GET request with BaseURL, valid endpoint, and invalid user ID 'abc'</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_USerID.send_get_request_with_invalid_id_string()">
+                <span>When User sends GET request with invalid ID 'abc'</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_USerID.validate_400_status()">
+                <span>Then User receives 400 Bad Request status with an error message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="269"><span class="badge log pass-bg mr-2">Pass</span>Get User with Invalid Endpoint</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Get_USerID.prepare_get_with_invalid_endpoint()">
+                <span>Given User prepares GET request with the BaseURL and invalid endpoint path</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_USerID.send_get_to_wrong_endpoint()">
+                <span>When User sends GET request to the wrong path</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_USerID.validate_404_status()">
+                <span>Then User receives 404 Not Found status with an error message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="275"><span class="badge log pass-bg mr-2">Pass</span>Get User without Authorization</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Get_USerID.prepare_get_without_auth()">
+                <span>Given User prepares GET request with valid BaseURL, valid endpoint, and existing user ID but without Authorization header</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_USerID.send_get_without_auth()">
+                <span>When User sends GET request with existing user ID without Authorization</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_USerID.validate_401_status()">
+                <span>Then User receives the 401 Unauthorized status</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="281"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Update User Details API - PATCH Request Scenarios</p>
+            <p class="text-sm">
+              <span>1:07:39 PM</span> / <span>00:00:07:556</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Update User Details API - PATCH Request Scenarios</h5>
+<span class='badge badge-success'>06.13.2025 1:07:39 PM</span>
+<span class='badge badge-danger'>06.13.2025 1:07:46 PM</span>
+<span class='badge badge-default'>00:00:07:556</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=281</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="282"><span class="badge log pass-bg mr-2">Pass</span>Verify that user is able to update FirstName</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.patchRequestWithValidURLValidEndpoint()">
+                <span>Given Patch request with new data, BaseURL, valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.sendPatchRequestWithFile(java.lang.String)">
+                <span>When User creates Patch request with file "patch_firstname.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.validateResponseStatusCode(int)">
+                <span>Then User receives 200 status code</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="288"><span class="badge log pass-bg mr-2">Pass</span>Verify that user is able to update LastName</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.patchRequestWithValidURLValidEndpoint()">
+                <span>Given Patch request with new data, BaseURL, valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.sendPatchRequestWithFile(java.lang.String)">
+                <span>When User creates Patch request with file "patch_lastname.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.validateResponseStatusCode(int)">
+                <span>Then User receives 200 status code</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="294"><span class="badge log pass-bg mr-2">Pass</span>Verify that user is able to update contact_number</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.patchRequestWithValidURLValidEndpoint()">
+                <span>Given Patch request with new data, BaseURL, valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.sendPatchRequestWithFile(java.lang.String)">
+                <span>When User creates Patch request with file "patch_contactnumber.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.validateResponseStatusCode(int)">
+                <span>Then User receives 200 status code</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="300"><span class="badge log pass-bg mr-2">Pass</span>Verify that user is able to update email_id</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.patchRequestWithValidURLValidEndpoint()">
+                <span>Given Patch request with new data, BaseURL, valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.sendPatchRequestWithFile(java.lang.String)">
+                <span>When User creates Patch request with file "patch_emailid.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.validateResponseStatusCode(int)">
+                <span>Then User receives 200 status code</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="306"><span class="badge log pass-bg mr-2">Pass</span>Verify that user is able to update plotNumber</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.patchRequestWithValidURLValidEndpoint()">
+                <span>Given Patch request with new data, BaseURL, valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.sendPatchRequestWithFile(java.lang.String)">
+                <span>When User creates Patch request with file "patch_plotnumber.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.validateResponseStatusCode(int)">
+                <span>Then User receives 200 status code</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="312"><span class="badge log pass-bg mr-2">Pass</span>Verify that user is able to update Street</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.patchRequestWithValidURLValidEndpoint()">
+                <span>Given Patch request with new data, BaseURL, valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.sendPatchRequestWithFile(java.lang.String)">
+                <span>When User creates Patch request with file "patch_street.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.validateResponseStatusCode(int)">
+                <span>Then User receives 200 status code</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="318"><span class="badge log pass-bg mr-2">Pass</span>Verify that user is able to update state</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.patchRequestWithValidURLValidEndpoint()">
+                <span>Given Patch request with new data, BaseURL, valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.sendPatchRequestWithFile(java.lang.String)">
+                <span>When User creates Patch request with file "patch_state.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.validateResponseStatusCode(int)">
+                <span>Then User receives 200 status code</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="324"><span class="badge log pass-bg mr-2">Pass</span>Verify that user is able to update Country</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.patchRequestWithValidURLValidEndpoint()">
+                <span>Given Patch request with new data, BaseURL, valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.sendPatchRequestWithFile(java.lang.String)">
+                <span>When User creates Patch request with file "patch_country.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.validateResponseStatusCode(int)">
+                <span>Then User receives 200 status code</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="330"><span class="badge log pass-bg mr-2">Pass</span>Verify that user is able to update zipCode</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.patchRequestWithValidURLValidEndpoint()">
+                <span>Given Patch request with new data, BaseURL, valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.sendPatchRequestWithFile(java.lang.String)">
+                <span>When User creates Patch request with file "patch_zipcode.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.validateResponseStatusCode(int)">
+                <span>Then User receives 200 status code</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="336"><span class="badge log pass-bg mr-2">Pass</span>Verify that user is not able to update contact_number with Characters</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.patchRequestWithValidURLValidEndpoint()">
+                <span>Given Patch request with new data, BaseURL, valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.sendPatchRequestWithFile(java.lang.String)">
+                <span>When User creates Patch request with file "patch_invalid_contactnumber.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.validateResponseStatusCode(int)">
+                <span>Then User receives 400 status code</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="342"><span class="badge log pass-bg mr-2">Pass</span>Verify that user is not able to update Invalid email_id</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.patchRequestWithValidURLValidEndpoint()">
+                <span>Given Patch request with new data, BaseURL, valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.sendPatchRequestWithFile(java.lang.String)">
+                <span>When User creates Patch request with file "patch_invalid_email.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.validateResponseStatusCode(int)">
+                <span>Then User receives 400 status code</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="348"><span class="badge log pass-bg mr-2">Pass</span>Verify that user is not able to update Invalid state with Numeric Data</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.patchRequestWithValidURLValidEndpoint()">
+                <span>Given Patch request with new data, BaseURL, valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.sendPatchRequestWithFile(java.lang.String)">
+                <span>When User creates Patch request with file "patch_invalid_state.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.validateResponseStatusCode(int)">
+                <span>Then User receives 400 status code</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="354"><span class="badge log pass-bg mr-2">Pass</span>Verify that user is not able to update Invalid Country with Numeric Data</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.patchRequestWithValidURLValidEndpoint()">
+                <span>Given Patch request with new data, BaseURL, valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.sendPatchRequestWithFile(java.lang.String)">
+                <span>When User creates Patch request with file "patch_invalid_country.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.validateResponseStatusCode(int)">
+                <span>Then User receives 400 status code</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="360"><span class="badge log pass-bg mr-2">Pass</span>Verify that user is not able to update Invalid zipCode with Characters</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.patchRequestWithValidURLValidEndpoint()">
+                <span>Given Patch request with new data, BaseURL, valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.sendPatchRequestWithFile(java.lang.String)">
+                <span>When User creates Patch request with file "patch_invalid_zipcode.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.validateResponseStatusCode(int)">
+                <span>Then User receives 400 status code</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="366"><span class="badge log pass-bg mr-2">Pass</span>Verify that user is not able to update FirstName with invalid BaseURL</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.patchRequestWithInvalidBaseURL()">
+                <span>Given Patch request with new data, invalid BaseURL, valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.sendPatchRequestWithFile(java.lang.String)">
+                <span>When User creates Patch request with file "patch_firstname.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.validateResponseStatusCode(int)">
+                <span>Then User receives 404 status code</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="372"><span class="badge log pass-bg mr-2">Pass</span>Verify that user is not able to update FirstName with valid BaseURL, Invalid EndPoint</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.patchRequestWithInvalidEndpoint()">
+                <span>Given Patch request with new data, valid BaseURL, invalid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.sendPatchRequestWithFile(java.lang.String)">
+                <span>When User creates Patch request with file "patch_firstname.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.validateResponseStatusCode(int)">
+                <span>Then User receives 400 status code</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="378"><span class="badge log pass-bg mr-2">Pass</span>Verify that user is not able to update FirstName with valid BaseURL, empty EndPoint</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.patchRequestWithEmptyEndpoint()">
+                <span>Given Patch request with new data, valid BaseURL, empty Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.sendPatchRequestWithFile(java.lang.String)">
+                <span>When User creates Patch request with file "patch_firstname.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.validateResponseStatusCode(int)">
+                <span>Then User receives 404 status code</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="384"><span class="badge log pass-bg mr-2">Pass</span>Verify that user is not able to update FirstName with BaseURL, valid Endpoint and No Auth</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.patchRequestWithNoAuth()">
+                <span>Given Patch request with new data, valid BaseURL, valid Endpoint and No Auth</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.sendPatchRequestWithFile(java.lang.String)">
+                <span>When User creates Patch request with file "patch_firstname.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Patch_Userid.validateResponseStatusCode(int)">
+                <span>Then User receives 401 status code</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="390"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Add New User API - Negative Scenarios</p>
+            <p class="text-sm">
+              <span>1:07:46 PM</span> / <span>00:00:06:119</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Add New User API - Negative Scenarios</h5>
+<span class='badge badge-success'>06.13.2025 1:07:46 PM</span>
+<span class='badge badge-danger'>06.13.2025 1:07:52 PM</span>
+<span class='badge badge-default'>00:00:06:119</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=390</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="391"><span class="badge log pass-bg mr-2">Pass</span>Add a new user without Authorization</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.prepareValidPostRequest()">
+                <span>Given Users prepare the POST request with BaseURL and valid endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.sendPostWithoutAuth()">
+                <span>When Users sends the POST request with all mandatory fields but without Authorization</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.users_receives_401_unauthorized_status()">
+                <span>Then Users receives 401 Unauthorized status</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="397"><span class="badge log pass-bg mr-2">Pass</span>Add a new user with invalid BaseURL</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.prepareRequestWithInvalidBaseURL()">
+                <span>Given User prepares the POST request with invalid BaseURL and valid endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.user_sends_post_request_with_required_details()">
+                <span>When User sends the POST request with all required user details</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.user_receives_404_not_found_status_with_appropriate_message()">
+                <span>Then User receives 404 Not Found status with appropriate message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="403"><span class="badge log pass-bg mr-2">Pass</span>Add a new user with invalid endpoint</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.prepareRequestWithInvalidEndpoint()">
+                <span>Given User prepares the POST request with BaseURL and invalid endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.user_sends_post_request_with_required_details()">
+                <span>When User sends the POST request with all required user details</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.user_receives_404_not_found_status_with_appropriate_message()">
+                <span>Then User receives 404 Not Found status with appropriate message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="409"><span class="badge log pass-bg mr-2">Pass</span>Add a new user with empty endpoint</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.prepareRequestWithEmptyEndpoint()">
+                <span>Given User prepares the POST request with BaseURL and empty endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.user_sends_post_request_with_required_details()">
+                <span>When User sends the POST request with all required user details</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.user_receives_404_not_found_status_with_appropriate_message()">
+                <span>Then User receives 404 Not Found status with appropriate message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="415"><span class="badge log fail-bg mr-2">Fail</span>Add a new user with empty request body</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.prepareValidPostRequest()">
+                <span>Given Users prepare the POST request with BaseURL and valid endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.sendEmptyRequestBody()">
+                <span>When User sends the POST request with an empty request body</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="StepDefinition.PostNegative_CreateUsers.user_receives_400_bad_request_status_with_appropriate_message()">
+                <span>Then User receives 400 Bad Request status with appropriate message</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: expected [400] but found [500]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at org.testng.Assert.assertEquals(Assert.java:1441)
+	at StepDefinition.PostNegative_CreateUsers.user_receives_400_bad_request_status_with_appropriate_message(PostNegative_CreateUsers.java:186)
+	at ✽.User receives 400 Bad Request status with appropriate message(file:///C:/Users/chand/eclipse-workspace/API_RESTASSURED/src/test/resources/Features/Post_Negative.feature:26)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="421"><span class="badge log fail-bg mr-2">Fail</span>Add a new user with only optional fields</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.prepareValidPostRequest()">
+                <span>Given Users prepare the POST request with BaseURL and valid endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.sendOnlyOptionalFields()">
+                <span>When Users sends the POST request without only mandatory fields</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="StepDefinition.PostNegative_CreateUsers.user_receives_400_bad_request_status_with_appropriate_message()">
+                <span>Then User receives 400 Bad Request status with appropriate message</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: expected [400] but found [500]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at org.testng.Assert.assertEquals(Assert.java:1441)
+	at StepDefinition.PostNegative_CreateUsers.user_receives_400_bad_request_status_with_appropriate_message(PostNegative_CreateUsers.java:186)
+	at ✽.User receives 400 Bad Request status with appropriate message(file:///C:/Users/chand/eclipse-workspace/API_RESTASSURED/src/test/resources/Features/Post_Negative.feature:31)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="427"><span class="badge log pass-bg mr-2">Pass</span>Add a new user with existing email and contact</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.prepareValidPostRequest()">
+                <span>Given Users prepare the POST request with BaseURL and valid endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.sendDuplicateEmailAndContact()">
+                <span>When Users sends the POST request with existing email and contact number</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.validate409ConflictResponse()">
+                <span>Then User receives 409 Conflict status for existing entry</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="433"><span class="badge log pass-bg mr-2">Pass</span>Add a new user with invalid first name</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.prepareValidPostRequest()">
+                <span>Given Users prepare the POST request with BaseURL and valid endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.sendInvalidFirstName()">
+                <span>When User sends the POST request with invalid first name</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.user_receives_400_bad_request_status_with_appropriate_message()">
+                <span>Then User receives 400 Bad Request status with appropriate message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="439"><span class="badge log fail-bg mr-2">Fail</span>Add a new user with invalid last name</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.prepareValidPostRequest()">
+                <span>Given Users prepare the POST request with BaseURL and valid endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="StepDefinition.PostNegative_CreateUsers.sendInvalidLastName()">
+                <span>When User sends the POST request with invalid last name</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.RuntimeException: JSON object is null. Check the file path or contents.
+	at StepDefinition.PostNegative_CreateUsers.sendRequest(PostNegative_CreateUsers.java:193)
+	at StepDefinition.PostNegative_CreateUsers.sendInvalidLastName(PostNegative_CreateUsers.java:92)
+	at ✽.User sends the POST request with invalid last name(file:///C:/Users/chand/eclipse-workspace/API_RESTASSURED/src/test/resources/Features/Post_Negative.feature:45)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinition.PostNegative_CreateUsers.user_receives_400_bad_request_status_with_appropriate_message()">
+                <span>Then User receives 400 Bad Request status with appropriate message</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="445"><span class="badge log fail-bg mr-2">Fail</span>Add a new user with special characters in contact number</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.prepareValidPostRequest()">
+                <span>Given Users prepare the POST request with BaseURL and valid endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="StepDefinition.PostNegative_CreateUsers.sendSpecialCharInContact()">
+                <span>When User sends the POST request with special characters in contact number</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.RuntimeException: JSON object is null. Check the file path or contents.
+	at StepDefinition.PostNegative_CreateUsers.sendRequest(PostNegative_CreateUsers.java:193)
+	at StepDefinition.PostNegative_CreateUsers.sendSpecialCharInContact(PostNegative_CreateUsers.java:100)
+	at ✽.User sends the POST request with special characters in contact number(file:///C:/Users/chand/eclipse-workspace/API_RESTASSURED/src/test/resources/Features/Post_Negative.feature:50)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinition.PostNegative_CreateUsers.user_receives_400_bad_request_status_with_appropriate_message()">
+                <span>Then User receives 400 Bad Request status with appropriate message</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="451"><span class="badge log pass-bg mr-2">Pass</span>Add a new user with contact number less than 10 digits</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.prepareValidPostRequest()">
+                <span>Given Users prepare the POST request with BaseURL and valid endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.sendShortContact()">
+                <span>When User sends the POST request with less than 10 digits in contact number</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.user_receives_400_bad_request_status_with_appropriate_message()">
+                <span>Then User receives 400 Bad Request status with appropriate message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="457"><span class="badge log pass-bg mr-2">Pass</span>Add a new user with contact number more than 10 digits</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.prepareValidPostRequest()">
+                <span>Given Users prepare the POST request with BaseURL and valid endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.sendLongContact()">
+                <span>When User sends the POST request with more than 10 digits in contact number</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.user_receives_400_bad_request_status_with_appropriate_message()">
+                <span>Then User receives 400 Bad Request status with appropriate message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="463"><span class="badge log pass-bg mr-2">Pass</span>Add a new user with integer plot number</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.prepareValidPostRequest()">
+                <span>Given Users prepare the POST request with BaseURL and valid endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.sendNumericPlot()">
+                <span>When User sends the POST request with numeric plot number</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.user_receives_400_bad_request_status_with_appropriate_message()">
+                <span>Then User receives 400 Bad Request status with appropriate message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="469"><span class="badge log pass-bg mr-2">Pass</span>Add a new user with special characters in street name</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.prepareValidPostRequest()">
+                <span>Given Users prepare the POST request with BaseURL and valid endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.sendSpecialStreet()">
+                <span>When User sends the POST request with special characters in street name</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.user_receives_400_bad_request_status_with_appropriate_message()">
+                <span>Then User receives 400 Bad Request status with appropriate message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="475"><span class="badge log pass-bg mr-2">Pass</span>Add a new user with numeric state value</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.prepareValidPostRequest()">
+                <span>Given Users prepare the POST request with BaseURL and valid endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.sendNumericState()">
+                <span>When User sends the POST request with numeric value in state</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.user_receives_400_bad_request_status_with_appropriate_message()">
+                <span>Then User receives 400 Bad Request status with appropriate message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="481"><span class="badge log pass-bg mr-2">Pass</span>Add a new user with numeric country value</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.prepareValidPostRequest()">
+                <span>Given Users prepare the POST request with BaseURL and valid endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.sendNumericCountry()">
+                <span>When User sends the POST request with numeric value in country</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.user_receives_400_bad_request_status_with_appropriate_message()">
+                <span>Then User receives 400 Bad Request status with appropriate message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="487"><span class="badge log fail-bg mr-2">Fail</span>Add a new user with special characters in zip code</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.prepareValidPostRequest()">
+                <span>Given Users prepare the POST request with BaseURL and valid endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.PostNegative_CreateUsers.sendSpecialZip()">
+                <span>When User sends the POST request with special characters in zip code</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="StepDefinition.PostNegative_CreateUsers.user_receives_400_bad_request_status_with_appropriate_message()">
+                <span>Then User receives 400 Bad Request status with appropriate message</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at StepDefinition.PostNegative_CreateUsers.user_receives_400_bad_request_status_with_appropriate_message(PostNegative_CreateUsers.java:187)
+	at ✽.User receives 400 Bad Request status with appropriate message(file:///C:/Users/chand/eclipse-workspace/API_RESTASSURED/src/test/resources/Features/Post_Negative.feature:86)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="493"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Update User Details API - PUT Request Scenarios</p>
+            <p class="text-sm">
+              <span>1:07:52 PM</span> / <span>00:00:13:033</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Update User Details API - PUT Request Scenarios</h5>
+<span class='badge badge-success'>06.13.2025 1:07:52 PM</span>
+<span class='badge badge-danger'>06.13.2025 1:08:06 PM</span>
+<span class='badge badge-default'>00:00:13:033</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=493</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="494"><span class="badge log pass-bg mr-2">Pass</span>Update user details with valid BaseURL and valid Endpoints</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.preparePutRequestWithAuthValidURL()">
+                <span>Given User prepares PUT request with authorization and valid BaseURL and valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.sendPutRequestWithJsonFile(java.lang.String)">
+                <span>When User sends PUT request with JSON file "update_valid_all_fields.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.validateStatusCode(int)">
+                <span>Then User should receive status code 200</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="500"><span class="badge log pass-bg mr-2">Pass</span>UPDATE user details with no request body</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.preparePutRequestWithAuthValidURL()">
+                <span>Given User prepares PUT request with authorization and valid BaseURL and valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.sendPutRequestWithoutBody()">
+                <span>When User sends PUT request without request body</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.validateStatusCode(int)">
+                <span>Then User should receive status code 400</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="506"><span class="badge log fail-bg mr-2">Fail</span>UPDATE user details with duplicate contact number</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.preparePutRequestWithAuthValidURL()">
+                <span>Given User prepares PUT request with authorization and valid BaseURL and valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.sendPutRequestWithJsonFile(java.lang.String)">
+                <span>When User sends PUT request with JSON file "update_duplicate_contact.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="StepDefinition.Put_UserId.validateStatusCode(int)">
+                <span>Then User should receive status code 409</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: Expected status code 409 but got 200 expected [409] but found [200]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at StepDefinition.Put_UserId.validateStatusCode(Put_UserId.java:90)
+	at ✽.User should receive status code 409(file:///C:/Users/chand/eclipse-workspace/API_RESTASSURED/src/test/resources/Features/Put_userid.feature:16)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="512"><span class="badge log pass-bg mr-2">Pass</span>Update user details with less than ten digits contact number</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.preparePutRequestWithAuthValidURL()">
+                <span>Given User prepares PUT request with authorization and valid BaseURL and valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.sendPutRequestWithJsonFile(java.lang.String)">
+                <span>When User sends PUT request with JSON file "invalid_short_contact.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.validateStatusCode(int)">
+                <span>Then User should receive status code 400</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="518"><span class="badge log fail-bg mr-2">Fail</span>UPDATE user details with duplicate email ID</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.preparePutRequestWithAuthValidURL()">
+                <span>Given User prepares PUT request with authorization and valid BaseURL and valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.sendPutRequestWithJsonFile(java.lang.String)">
+                <span>When User sends PUT request with JSON file "duplicate_email.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="StepDefinition.Put_UserId.validateStatusCode(int)">
+                <span>Then User should receive status code 409</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: Expected status code 409 but got 200 expected [409] but found [200]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at StepDefinition.Put_UserId.validateStatusCode(Put_UserId.java:90)
+	at ✽.User should receive status code 409(file:///C:/Users/chand/eclipse-workspace/API_RESTASSURED/src/test/resources/Features/Put_userid.feature:26)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="524"><span class="badge log pass-bg mr-2">Pass</span>UPDATE user detail with invalid emailID</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.preparePutRequestWithAuthValidURL()">
+                <span>Given User prepares PUT request with authorization and valid BaseURL and valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.sendPutRequestWithJsonFile(java.lang.String)">
+                <span>When User sends PUT request with JSON file "invalid_email.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.validateStatusCode(int)">
+                <span>Then User should receive status code 400</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="530"><span class="badge log pass-bg mr-2">Pass</span>UPDATE user details with invalid plot number</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.preparePutRequestWithAuthValidURL()">
+                <span>Given User prepares PUT request with authorization and valid BaseURL and valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.sendPutRequestWithJsonFile(java.lang.String)">
+                <span>When User sends PUT request with JSON file "invalid_plotnumber.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.validateStatusCode(int)">
+                <span>Then User should receive status code 400</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="536"><span class="badge log pass-bg mr-2">Pass</span>UPDATE user details with valid new plot number</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.preparePutRequestWithAuthValidURL()">
+                <span>Given User prepares PUT request with authorization and valid BaseURL and valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.sendPutRequestWithJsonFile(java.lang.String)">
+                <span>When User sends PUT request with JSON file "valid_plotnumber.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.validateStatusCode(int)">
+                <span>Then User should receive status code 200</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="542"><span class="badge log pass-bg mr-2">Pass</span>UPDATE user details with invalid new street name</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.preparePutRequestWithAuthValidURL()">
+                <span>Given User prepares PUT request with authorization and valid BaseURL and valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.sendPutRequestWithJsonFile(java.lang.String)">
+                <span>When User sends PUT request with JSON file "invalid_street.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.validateStatusCode(int)">
+                <span>Then User should receive status code 400</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="548"><span class="badge log pass-bg mr-2">Pass</span>UPDATE user details with valid new street name</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.preparePutRequestWithAuthValidURL()">
+                <span>Given User prepares PUT request with authorization and valid BaseURL and valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.sendPutRequestWithJsonFile(java.lang.String)">
+                <span>When User sends PUT request with JSON file "valid_street.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.validateStatusCode(int)">
+                <span>Then User should receive status code 200</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="554"><span class="badge log pass-bg mr-2">Pass</span>UPDATE user details with invalid country name</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.preparePutRequestWithAuthValidURL()">
+                <span>Given User prepares PUT request with authorization and valid BaseURL and valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.sendPutRequestWithJsonFile(java.lang.String)">
+                <span>When User sends PUT request with JSON file "invalid_country.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.validateStatusCode(int)">
+                <span>Then User should receive status code 400</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="560"><span class="badge log pass-bg mr-2">Pass</span>UPDATE user details with valid new country name</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.preparePutRequestWithAuthValidURL()">
+                <span>Given User prepares PUT request with authorization and valid BaseURL and valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.sendPutRequestWithJsonFile(java.lang.String)">
+                <span>When User sends PUT request with JSON file "valid_country.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.validateStatusCode(int)">
+                <span>Then User should receive status code 200</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="566"><span class="badge log pass-bg mr-2">Pass</span>UPDATE user details with invalid zipcode</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.preparePutRequestWithAuthValidURL()">
+                <span>Given User prepares PUT request with authorization and valid BaseURL and valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.sendPutRequestWithJsonFile(java.lang.String)">
+                <span>When User sends PUT request with JSON file "invalid_zipcode.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.validateStatusCode(int)">
+                <span>Then User should receive status code 400</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="572"><span class="badge log pass-bg mr-2">Pass</span>UPDATE user details with valid new zipcode</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.preparePutRequestWithAuthValidURL()">
+                <span>Given User prepares PUT request with authorization and valid BaseURL and valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.sendPutRequestWithJsonFile(java.lang.String)">
+                <span>When User sends PUT request with JSON file "valid_zipcode.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.validateStatusCode(int)">
+                <span>Then User should receive status code 200</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="578"><span class="badge log pass-bg mr-2">Pass</span>UPDATE user details with invalid firstname</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.preparePutRequestWithAuthValidURL()">
+                <span>Given User prepares PUT request with authorization and valid BaseURL and valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.sendPutRequestWithJsonFile(java.lang.String)">
+                <span>When User sends PUT request with JSON file "invalid_firstname.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.validateStatusCode(int)">
+                <span>Then User should receive status code 400</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="584"><span class="badge log pass-bg mr-2">Pass</span>UPDATE user details with valid firstname</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.preparePutRequestWithAuthValidURL()">
+                <span>Given User prepares PUT request with authorization and valid BaseURL and valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.sendPutRequestWithJsonFile(java.lang.String)">
+                <span>When User sends PUT request with JSON file "valid_firstname.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.validateStatusCode(int)">
+                <span>Then User should receive status code 200</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="590"><span class="badge log pass-bg mr-2">Pass</span>UPDATE user details with invalid lastname</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.preparePutRequestWithAuthValidURL()">
+                <span>Given User prepares PUT request with authorization and valid BaseURL and valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.sendPutRequestWithJsonFile(java.lang.String)">
+                <span>When User sends PUT request with JSON file "invalid_lastname.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.validateStatusCode(int)">
+                <span>Then User should receive status code 400</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="596"><span class="badge log pass-bg mr-2">Pass</span>UPDATE user details with valid lastname</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.preparePutRequestWithAuthValidURL()">
+                <span>Given User prepares PUT request with authorization and valid BaseURL and valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.sendPutRequestWithJsonFile(java.lang.String)">
+                <span>When User sends PUT request with JSON file "valid_lastname.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.validateStatusCode(int)">
+                <span>Then User should receive status code 200</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="602"><span class="badge log pass-bg mr-2">Pass</span>UPDATE user details with empty contact number</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.preparePutRequestWithAuthValidURL()">
+                <span>Given User prepares PUT request with authorization and valid BaseURL and valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.sendPutRequestWithJsonFile(java.lang.String)">
+                <span>When User sends PUT request with JSON file "empty_contact.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.validateStatusCode(int)">
+                <span>Then User should receive status code 400</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="608"><span class="badge log pass-bg mr-2">Pass</span>UPDATE user details with empty emailID</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.preparePutRequestWithAuthValidURL()">
+                <span>Given User prepares PUT request with authorization and valid BaseURL and valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.sendPutRequestWithJsonFile(java.lang.String)">
+                <span>When User sends PUT request with JSON file "empty_email.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.validateStatusCode(int)">
+                <span>Then User should receive status code 400</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="614"><span class="badge log pass-bg mr-2">Pass</span>UPDATE user details with empty firstname</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.preparePutRequestWithAuthValidURL()">
+                <span>Given User prepares PUT request with authorization and valid BaseURL and valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.sendPutRequestWithJsonFile(java.lang.String)">
+                <span>When User sends PUT request with JSON file "empty_firstname.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.validateStatusCode(int)">
+                <span>Then User should receive status code 400</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="620"><span class="badge log pass-bg mr-2">Pass</span>UPDATE user details with empty lastname</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.preparePutRequestWithAuthValidURL()">
+                <span>Given User prepares PUT request with authorization and valid BaseURL and valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.sendPutRequestWithJsonFile(java.lang.String)">
+                <span>When User sends PUT request with JSON file "empty_lastname.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.validateStatusCode(int)">
+                <span>Then User should receive status code 400</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="626"><span class="badge log pass-bg mr-2">Pass</span>UPDATE user details with empty plotnumber</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.preparePutRequestWithAuthValidURL()">
+                <span>Given User prepares PUT request with authorization and valid BaseURL and valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.sendPutRequestWithJsonFile(java.lang.String)">
+                <span>When User sends PUT request with JSON file "empty_plotnumber.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.validateStatusCode(int)">
+                <span>Then User should receive status code 400</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="632"><span class="badge log pass-bg mr-2">Pass</span>UPDATE user details with empty street</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.preparePutRequestWithAuthValidURL()">
+                <span>Given User prepares PUT request with authorization and valid BaseURL and valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.sendPutRequestWithJsonFile(java.lang.String)">
+                <span>When User sends PUT request with JSON file "empty_street.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.validateStatusCode(int)">
+                <span>Then User should receive status code 400</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="638"><span class="badge log pass-bg mr-2">Pass</span>UPDATE user details with empty country</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.preparePutRequestWithAuthValidURL()">
+                <span>Given User prepares PUT request with authorization and valid BaseURL and valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.sendPutRequestWithJsonFile(java.lang.String)">
+                <span>When User sends PUT request with JSON file "empty_country.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.validateStatusCode(int)">
+                <span>Then User should receive status code 400</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="644"><span class="badge log pass-bg mr-2">Pass</span>UPDATE user details with empty zipcode</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.preparePutRequestWithAuthValidURL()">
+                <span>Given User prepares PUT request with authorization and valid BaseURL and valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.sendPutRequestWithJsonFile(java.lang.String)">
+                <span>When User sends PUT request with JSON file "empty_zipcode.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.validateStatusCode(int)">
+                <span>Then User should receive status code 400</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="650"><span class="badge log pass-bg mr-2">Pass</span>UPDATE user details with invalid BaseURL</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.preparePutRequestWithInvalidBaseURL()">
+                <span>Given User prepares PUT request with authorization and invalid BaseURL and valid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.sendPutRequestWithJsonFile(java.lang.String)">
+                <span>When User sends PUT request with JSON file "update_valid_all_fields.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.validateStatusCode(int)">
+                <span>Then User should receive status code 404</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="656"><span class="badge log fail-bg mr-2">Fail</span>UPDATE user details with invalid endpoint</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.preparePutRequestWithInvalidEndpoint()">
+                <span>Given User prepares PUT request with authorization and valid BaseURL and invalid Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.sendPutRequestWithJsonFile(java.lang.String)">
+                <span>When User sends PUT request with JSON file "update_valid_all_fields.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="StepDefinition.Put_UserId.validateStatusCode(int)">
+                <span>Then User should receive status code 404</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: Expected status code 404 but got 400 expected [404] but found [400]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at StepDefinition.Put_UserId.validateStatusCode(Put_UserId.java:90)
+	at ✽.User should receive status code 404(file:///C:/Users/chand/eclipse-workspace/API_RESTASSURED/src/test/resources/Features/Put_userid.feature:141)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="662"><span class="badge log pass-bg mr-2">Pass</span>UPDATE user details with empty endpoint</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.preparePutRequestWithEmptyEndpoint()">
+                <span>Given User prepares PUT request with authorization and valid BaseURL and empty Endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.sendPutRequestWithJsonFile(java.lang.String)">
+                <span>When User sends PUT request with JSON file "update_valid_all_fields.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.validateStatusCode(int)">
+                <span>Then User should receive status code 404</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="668"><span class="badge log pass-bg mr-2">Pass</span>Add a New User with all fields without Authorization</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.preparePutRequestWithoutAuthorization()">
+                <span>Given User prepares PUT request with valid BaseURL and valid Endpoint without Auth</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.sendPutRequestWithJsonFile(java.lang.String)">
+                <span>When User sends PUT request with JSON file "update_valid_all_fields.json"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Put_UserId.validateStatusCode(int)">
+                <span>Then User should receive status code 401</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="674"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Get All Users API - GET Request Scenarios</p>
+            <p class="text-sm">
+              <span>1:08:06 PM</span> / <span>00:00:10:337</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Get All Users API - GET Request Scenarios</h5>
+<span class='badge badge-success'>06.13.2025 1:08:06 PM</span>
+<span class='badge badge-danger'>06.13.2025 1:08:16 PM</span>
+<span class='badge badge-default'>00:00:10:337</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=674</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="675"><span class="badge log pass-bg mr-2">Pass</span>Get All Users with Valid Base URL and Endpoint</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Get_Users.prepare_get_all_users_valid_request()">
+                <span>Given User prepares the GET request with valid BaseURL and valid endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_Users.send_get_all_users_request()">
+                <span>When User sends GET request to fetch users</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_Users.validate_200_status_and_users_list()">
+                <span>Then User receives 200 OK status with list of users</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="681"><span class="badge log pass-bg mr-2">Pass</span>Validate Response Body Content-Type is JSON</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Get_Users.prepare_get_all_users_valid_request()">
+                <span>Given User prepares the GET request with valid BaseURL and valid endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_Users.send_get_all_users_request()">
+                <span>When User sends GET request to fetch users</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_Users.validate_content_type_json()">
+                <span>Then Response Content-Type is JSON with the status code 200 OK</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="687"><span class="badge log pass-bg mr-2">Pass</span>Validate Response Contains Required Fields</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Get_Users.prepare_get_all_users_valid_request()">
+                <span>Given User prepares the GET request with valid BaseURL and valid endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_Users.send_get_all_users_request()">
+                <span>When User sends GET request to fetch users</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_Users.validate_user_fields_in_response()">
+                <span>Then Response contains user fields: user_id, UserfirstName, UserlastName, userContactNumber, userEmailId, creationTime, lastModTime, userAddress, addressId, plotNumber, street, state, country, zipCode</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="693"><span class="badge log fail-bg mr-2">Fail</span>Validate user_id is integer type in response</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Get_Users.prepare_get_all_users_valid_request()">
+                <span>Given User prepares the GET request with valid BaseURL and valid endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_Users.send_get_all_users_request()">
+                <span>When User sends GET request to fetch users</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="StepDefinition.Get_Users.validate_user_id_type_integer()">
+                <span>Then user_id is of integer type with the status code 200 OK</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at StepDefinition.Get_Users.validate_user_id_type_integer(Get_Users.java:86)
+	at ✽.user_id is of integer type with the status code 200 OK(file:///C:/Users/chand/eclipse-workspace/API_RESTASSURED/src/test/resources/Features/get.allusers.feature:21)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="699"><span class="badge log fail-bg mr-2">Fail</span>Validate address_id is integer type in response</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Get_Users.prepare_get_all_users_valid_request()">
+                <span>Given User prepares the GET request with valid BaseURL and valid endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_Users.send_get_all_users_request()">
+                <span>When User sends GET request to fetch users</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="StepDefinition.Get_Users.validate_address_id_type_integer()">
+                <span>Then address_id is of integer type with the status code 200 OK</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: addressId should be a number expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at StepDefinition.Get_Users.validate_address_id_type_integer(Get_Users.java:93)
+	at ✽.address_id is of integer type with the status code 200 OK(file:///C:/Users/chand/eclipse-workspace/API_RESTASSURED/src/test/resources/Features/get.allusers.feature:26)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="705"><span class="badge log pass-bg mr-2">Pass</span>Get Users with Invalid Endpoint</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Get_Users.prepare_request_with_invalid_endpoint()">
+                <span>Given User prepares the GET request with valid BaseURL and invalid endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_Users.send_get_all_users_request()">
+                <span>When User sends GET request to fetch users</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_Users.validate_404_status()">
+                <span>Then User receives 404 Not Found status</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="711"><span class="badge log pass-bg mr-2">Pass</span>Get Users with Empty Endpoint</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Get_Users.prepare_request_with_empty_endpoint()">
+                <span>Given User prepares the GET request with valid BaseURL and empty endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_Users.send_get_all_users_request()">
+                <span>When User sends GET request to fetch users</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_Users.validate_404_status()">
+                <span>Then User receives 404 Not Found status</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="717"><span class="badge log pass-bg mr-2">Pass</span>Get USERS without Authorization and receives 401</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Get_Users.prepare_request_without_auth()">
+                <span>Given User prepares the GET request without Authorization header</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_Users.send_get_users_without_auth()">
+                <span>When User sends GET request to fetch users without Auth</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_Users.validate_401_status()">
+                <span>Then User receives 401 Unauthorized status</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="723"><span class="badge log fail-bg mr-2">Fail</span>Get Users with Invalid Base URL</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinition.Get_Users.prepare_request_with_invalid_baseurl()">
+                <span>Given User prepares the GET request with invalid BaseURL and valid endpoint</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinition.Get_Users.send_get_all_users_request()">
+                <span>When User sends GET request to fetch users</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="StepDefinition.Get_Users.validate_404_with_invalid_baseurl()">
+                <span>Then User receives 404 Not Found status with error message</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at StepDefinition.Get_Users.validate_404_with_invalid_baseurl(Get_Users.java:142)
+	at ✽.User receives 404 Not Found status with error message(file:///C:/Users/chand/eclipse-workspace/API_RESTASSURED/src/test/resources/Features/get.allusers.feature:46)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="729"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Add New User API - Positive Scenarios</p>
+            <p class="text-sm">
+              <span>1:08:16 PM</span> / <span>00:00:06:980</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Add New User API - Positive Scenarios</h5>
+<span class='badge badge-success'>06.13.2025 1:08:16 PM</span>
+<span class='badge badge-danger'>06.13.2025 1:08:23 PM</span>
+<span class='badge badge-default'>00:00:06:980</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=729</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="730"><span class="badge log pass-bg mr-2">Pass</span>Add a new user with all mandatory and optional fields</div>
       </div>
     </div>
         <div class="collapse">
@@ -135,7 +3624,7 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="8"><span class="badge log fail-bg mr-2">Fail</span>Add a new user with only mandatory fields</div>
+        <div class="node" id="736"><span class="badge log fail-bg mr-2">Fail</span>Add a new user with only mandatory fields</div>
       </div>
     </div>
         <div class="">
@@ -161,7 +3650,7 @@
 	at org.testng.Assert.assertEquals(Assert.java:1431)
 	at org.testng.Assert.assertEquals(Assert.java:1395)
 	at StepDefinition.PostPositive_CreateUsers.validateResponse(PostPositive_CreateUsers.java:112)
-	at ✽.User receives 201 Created status(file:///C:/Users/chand/eclipse-workspace/API_RESTASSURED/src/test/resources/Features/Post_positive.feature:11)
+	at ✽.User receives 201 Created status(file:///C:/Users/chand/eclipse-workspace/API_RESTASSURED/src/test/resources/Features/post_positive.feature:11)
 </textarea>
       
       </div>
@@ -172,7 +3661,7 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="14"><span class="badge log pass-bg mr-2">Pass</span>Validate autogenerated user_id in response</div>
+        <div class="node" id="742"><span class="badge log pass-bg mr-2">Pass</span>Validate autogenerated user_id in response</div>
       </div>
     </div>
         <div class="collapse">
@@ -198,7 +3687,7 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="20"><span class="badge log pass-bg mr-2">Pass</span>Validate autogenerated addressID in response</div>
+        <div class="node" id="748"><span class="badge log pass-bg mr-2">Pass</span>Validate autogenerated addressID in response</div>
       </div>
     </div>
         <div class="collapse">
@@ -224,7 +3713,7 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="26"><span class="badge log fail-bg mr-2">Fail</span>Validate Content-Type is application/json in response</div>
+        <div class="node" id="754"><span class="badge log fail-bg mr-2">Fail</span>Validate Content-Type is application/json in response</div>
       </div>
     </div>
         <div class="">
@@ -250,7 +3739,7 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="32"><span class="badge log pass-bg mr-2">Pass</span>Validate response status code is 201</div>
+        <div class="node" id="760"><span class="badge log pass-bg mr-2">Pass</span>Validate response status code is 201</div>
       </div>
     </div>
         <div class="collapse">
@@ -276,7 +3765,7 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="38"><span class="badge log pass-bg mr-2">Pass</span>Validate response status text is Created</div>
+        <div class="node" id="766"><span class="badge log pass-bg mr-2">Pass</span>Validate response status text is Created</div>
       </div>
     </div>
         <div class="collapse">
@@ -302,7 +3791,7 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="44"><span class="badge log pass-bg mr-2">Pass</span>Validate user_id is integer in response</div>
+        <div class="node" id="772"><span class="badge log pass-bg mr-2">Pass</span>Validate user_id is integer in response</div>
       </div>
     </div>
         <div class="collapse">
@@ -328,7 +3817,7 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="50"><span class="badge log pass-bg mr-2">Pass</span>Validate addressID is integer in response</div>
+        <div class="node" id="778"><span class="badge log pass-bg mr-2">Pass</span>Validate addressID is integer in response</div>
       </div>
     </div>
         <div class="collapse">
@@ -367,22 +3856,22 @@
 <div class="test-list">
 <div class="test-list-tools">
 <ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
 </div>
 <div class="test-list-wrapper scrollable">
 <ul class="test-list-item">
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log badge-danger'>1</span>
+<span class='badge log badge-danger'>12</span>
 </span>
 <p class="name">java.lang.AssertionError</p>
-<p class="duration text-sm">1 tests</p>
+<p class="duration text-sm">12 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
 <h4>java.lang.AssertionError</h4>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
+<span status="fail" class='badge log badge-danger'>12 failed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -395,11 +3884,167 @@
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>00:00:03 AM</td>
+<td>13:07:18 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='12'>Then User receives 201 Created status</a>
+<a href="#" class="linked" test-id='1' id='6'>Then User receives 200 OK status with success message</a>
+<div class="">
+<span class="badge badge-default">User Deletion API by userFirstName - DELETE Request Scenarios.Verify that the user deletion operation is successful with existing userFirstName.Then User receives 200 OK status with success message</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:07:25 PM</td>
+<td>
+<a href="#" class="linked" test-id='80' id='85'>Then User receives 200 OK status with the success message</a>
+<div class="">
+<span class="badge badge-default">User Deletion API - DELETE Request Scenarios.Verify that the user deletion operation is successful with existing userID.Then User receives 200 OK status with the success message</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:07:48 PM</td>
+<td>
+<a href="#" class="linked" test-id='390' id='419'>Then User receives 400 Bad Request status with appropriate message</a>
+<div class="">
+<span class="badge badge-default">Add New User API - Negative Scenarios.Add a new user with empty request body.Then User receives 400 Bad Request status with appropriate message</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:07:49 PM</td>
+<td>
+<a href="#" class="linked" test-id='390' id='425'>Then User receives 400 Bad Request status with appropriate message</a>
+<div class="">
+<span class="badge badge-default">Add New User API - Negative Scenarios.Add a new user with only optional fields.Then User receives 400 Bad Request status with appropriate message</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:07:52 PM</td>
+<td>
+<a href="#" class="linked" test-id='390' id='491'>Then User receives 400 Bad Request status with appropriate message</a>
+<div class="">
+<span class="badge badge-default">Add New User API - Negative Scenarios.Add a new user with special characters in zip code.Then User receives 400 Bad Request status with appropriate message</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:07:54 PM</td>
+<td>
+<a href="#" class="linked" test-id='493' id='510'>Then User should receive status code 409</a>
+<div class="">
+<span class="badge badge-default">Update User Details API - PUT Request Scenarios.UPDATE user details with duplicate contact number.Then User should receive status code 409</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:07:55 PM</td>
+<td>
+<a href="#" class="linked" test-id='493' id='522'>Then User should receive status code 409</a>
+<div class="">
+<span class="badge badge-default">Update User Details API - PUT Request Scenarios.UPDATE user details with duplicate email ID.Then User should receive status code 409</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:08:05 PM</td>
+<td>
+<a href="#" class="linked" test-id='493' id='660'>Then User should receive status code 404</a>
+<div class="">
+<span class="badge badge-default">Update User Details API - PUT Request Scenarios.UPDATE user details with invalid endpoint.Then User should receive status code 404</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:08:13 PM</td>
+<td>
+<a href="#" class="linked" test-id='674' id='697'>Then user_id is of integer type with the status code 200 OK</a>
+<div class="">
+<span class="badge badge-default">Get All Users API - GET Request Scenarios.Validate user_id is integer type in response.Then user_id is of integer type with the status code 200 OK</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:08:14 PM</td>
+<td>
+<a href="#" class="linked" test-id='674' id='703'>Then address_id is of integer type with the status code 200 OK</a>
+<div class="">
+<span class="badge badge-default">Get All Users API - GET Request Scenarios.Validate address_id is integer type in response.Then address_id is of integer type with the status code 200 OK</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:08:16 PM</td>
+<td>
+<a href="#" class="linked" test-id='674' id='727'>Then User receives 404 Not Found status with error message</a>
+<div class="">
+<span class="badge badge-default">Get All Users API - GET Request Scenarios.Get Users with Invalid Base URL.Then User receives 404 Not Found status with error message</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:08:17 PM</td>
+<td>
+<a href="#" class="linked" test-id='729' id='740'>Then User receives 201 Created status</a>
 <div class="">
 <span class="badge badge-default">Add New User API - Positive Scenarios.Add a new user with only mandatory fields.Then User receives 201 Created status</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">java.lang.RuntimeException</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.RuntimeException</h4>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:07:49 PM</td>
+<td>
+<a href="#" class="linked" test-id='390' id='442'>When User sends the POST request with invalid last name</a>
+<div class="">
+<span class="badge badge-default">Add New User API - Negative Scenarios.Add a new user with invalid last name.When User sends the POST request with invalid last name</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:07:49 PM</td>
+<td>
+<a href="#" class="linked" test-id='390' id='448'>When User sends the POST request with special characters in contact number</a>
+<div class="">
+<span class="badge badge-default">Add New User API - Negative Scenarios.Add a new user with special characters in contact number.When User sends the POST request with special characters in contact number</span>
 </div>
 </td>
 </tr>
@@ -420,25 +4065,25 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Jun 12, 2025 11:59:57 PM</h3>
+<h3>Jun 13, 2025 01:07:14 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Jun 13, 2025 12:00:09 AM</h3>
+<h3>Jun 13, 2025 01:08:23 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Features Passed</p>
-<h3>0</h3>
+<h3>3</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Features Failed</p>
-<h3>1</h3>
+<h3>6</h3>
 </div></div>
 </div>
 </div>
@@ -454,12 +4099,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='0%'>
-<b>0</b> features passed
+<div><small data-tooltip='33%'>
+<b>3</b> features passed
 </small>
 </div>
 <div>
-<small data-tooltip='100%'><b>1</b> features failed,
+<small data-tooltip='66%'><b>6</b> features failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -477,9 +4122,9 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='77%'><b>7</b> scenarios passed</small></div>
+<div><small data-tooltip='88%'><b>114</b> scenarios passed</small></div>
 <div>
-<small data-tooltip='22%'><b>2</b> scenarios failed,
+<small data-tooltip='11%'><b>15</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -497,10 +4142,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='92%'><b>25</b> steps passed</small></div>
+<div><small data-tooltip='95%'><b>370</b> steps passed</small></div>
 <div>
-<small data-tooltip='7%'><b>2</b> steps failed,
-<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+<small data-tooltip='3%'><b>15</b> steps failed,
+<b>2</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
 </div>
@@ -516,7 +4161,7 @@
 </div></div>
 <script>
 var timeline = {
-"Add New User API - Positive Scenarios":10.406
+"User Deletion API by userFirstName - DELETE Request Scenarios":9.987,"User Deletion API - DELETE Request Scenarios":5.254,"Get User by FirstName API - GET Request Scenarios":4.409,"Get User by ID API - GET Request Scenarios":4.358,"Update User Details API - PATCH Request Scenarios":7.556,"Add New User API - Negative Scenarios":6.119,"Update User Details API - PUT Request Scenarios":13.033,"Get All Users API - GET Request Scenarios":10.337,"Add New User API - Positive Scenarios":6.98
 };
 </script>
 <div class="row">
@@ -525,21 +4170,21 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 0,
-failParent: 1,
+passParent: 3,
+failParent: 6,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 7,
-failChild: 2,
+passChild: 114,
+failChild: 15,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 25,
-failGrandChild: 2,
+passGrandChild: 370,
+failGrandChild: 15,
 warningGrandChild: 0,
-skipGrandChild: 0,
+skipGrandChild: 2,
 infoGrandChild: 0,
 eventsCount: 5,
 };

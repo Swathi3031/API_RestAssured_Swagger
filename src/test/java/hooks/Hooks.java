@@ -2,6 +2,7 @@ package hooks;
 
 import io.cucumber.java.Before;
 import StepDefinition.PostPositive_CreateUsers;
+import Utilities.configReader.ConfigReader;
 import io.cucumber.java.After;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
@@ -13,10 +14,15 @@ public class Hooks {
 
     @Before
     public void setup() {
-        RestAssured.baseURI = "https://userserviceapp-f5a54828541b.herokuapp.com";
+        String baseURI = ConfigReader.get("baseURI");
+        String contentType = ConfigReader.get("contentType");
+
+        RestAssured.baseURI = baseURI;
+
         requestSpec = RestAssured.given()
-                .header("Content-Type", "application/json");
+                .header("Content-Type", contentType);
     }
+
 
     @After(order = 1)
     public void cleanUpCreatedUser() {
