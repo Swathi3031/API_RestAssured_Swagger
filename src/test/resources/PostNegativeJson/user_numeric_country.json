@@ -1,0 +1,14 @@
+{
+  "userFirstName": "Hank",
+  "userLastName": "Williams",
+  "userEmailId": "hanqqqk@example.com",
+  "userContactNumber": 9567890123,
+  "userAddress": {
+    "plotNumber": "88-A",
+    "street": "Music Lane",
+    "city": "Tuneville",
+    "state": "TN",
+    "country": "98765",
+    "zipCode": 37201
+  }
+}

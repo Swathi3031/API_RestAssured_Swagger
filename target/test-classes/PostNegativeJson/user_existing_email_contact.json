@@ -1,0 +1,14 @@
+{
+  "userFirstName": "Jane",
+  "userLastName": "Doe",
+  "userEmailId": "Swathitest@gmail.com",
+  "userContactNumber": 4674755889,
+  "userAddress": {
+    "plotNumber": "456",
+    "street": "Second Street",
+    "city": "Gotham",
+    "state": "CA",
+    "country": "USA",
+    "zipCode": 90001
+  }
+}

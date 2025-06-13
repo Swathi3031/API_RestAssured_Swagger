@@ -1,0 +1,10 @@
+{
+ 
+  "userAddress": {
+    "plotNumber": "123-a",
+    "street": "MAx street",
+    "state": "TA",
+    "country": "USA",
+    "zipCode": 23433
+  }
+}

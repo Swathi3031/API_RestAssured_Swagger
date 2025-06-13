@@ -1,0 +1,14 @@
+{
+  "userFirstName": "Swa12345",
+  "userLastName": "Smith",
+  "userEmailId": "invalidfn@example.com",
+  "userContactNumber": 9123456780,
+  "userAddress": {
+    "plotNumber": "789-A",
+    "street": "Third Street",
+    "city": "Star City",
+    "state": "TX",
+    "country": "USA",
+    "zipCode": 73301
+  }
+}

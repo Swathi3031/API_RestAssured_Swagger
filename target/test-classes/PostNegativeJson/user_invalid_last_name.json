@@ -1,0 +1,14 @@
+{
+  "userFirstName": "Alice",
+  "userLastName": "SWA@#%$",
+  "userEmailId": "invalidln@example.com",
+  "userContactNumber": 9234567890,
+  "userAddress": {
+    "plotNumber": "321-A",
+    "street": "Fourth Street",
+    "city": "Central City",
+    "state": "FL",
+    "country": "USA",
+    "zipCode": 32801S
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "userFirstName": "Bob",
+  "userLastName": "Marley",
+  "userEmailId": "bob@example.com",
+  "userContactNumber": 98!@#$%^&*,
+  "userAddress": {
+    "plotNumber": "12-A",
+    "street": "Reggae Street",
+    "city": "Zion",
+    "state": "JA",
+    "country": "Jamaica",
+    "zipCode": 12345
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "userId": 21910,
+  "userFirstName": "Shruti",
+  "userLastName": "Kshirsagar",
+  "userContactNumber": 9598777766,
+  "userEmailId": "shruti_5Team5@gmail.com",
+  "creationTime": "2025-05-30T23:29:06.045+00:00",
+  "lastModTime": "2025-05-30T23:29:06.045+00:00",
+  "userAddress": {
+    "addressId": 21877,
+    "plotNumber": "P-3015",
+    "street": "New XMaple Street",
+    "state": "CA",
+    "country": "USA",
+    "zipCode": 98321
+  }
+}

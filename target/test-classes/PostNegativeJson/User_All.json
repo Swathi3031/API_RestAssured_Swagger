@@ -1,0 +1,14 @@
+{
+  "userFirstName": "John",
+  "userLastName": "Doe",
+  "userEmailId": "uneutuh@example.com",
+  "userContactNumber": 9876343210,
+  "userAddress": {
+    "plotNumber": "123-A",
+    "street": "Main Street",
+    "city": "Metropolis",
+    "state": "NY",
+    "country": "USA",
+    "zipCode": 10001
+  }
+}
